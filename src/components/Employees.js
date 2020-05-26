@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Employees.css";
 import Moment from "moment";
 
 const Employees = (props) => {

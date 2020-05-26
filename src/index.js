@@ -1,3 +1,4 @@
+// code retrieved from React activities 19,20
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
