@@ -1,14 +1,14 @@
-import axios from "axios";
+const loadEmployees = async () => {
+    const response = await fetch(
+        'https://randomuser.me/api/?nat=us&results=200',
+        {
+            method: 'GET'
+        }
+    )
 
+    let resData = await response.json();
 
-// const APIKEY = "&apikey=trilogy";
+    return resData
+}
 
-export default function getEmployeeName(query) {
-    // search: function (query) {
-    //     return axios.get(BASEURL);
-    // }
-    const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
-    return axios.get(BASEURL);
-
-
-};
+export default loadEmployees;
