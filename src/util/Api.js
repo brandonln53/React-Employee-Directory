@@ -1,14 +1,7 @@
-const loadEmployees = async () => {
-    const response = await fetch(
-        'https://randomuser.me/api/?nat=us&results=200',
-        {
-            method: 'GET'
-        }
-    )
+import axios from "axios";
 
-    let resData = await response.json();
-
-    return resData
-}
-
-export default loadEmployees;
+export default {
+  getEmployees: function() {
+    return axios.get("https://randomuser.me/api/?results=200");
+  }
+};
