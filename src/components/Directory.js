@@ -52,10 +52,8 @@ class Directory extends Component {
           <h2 className="display-4">
             Employee Directory
           </h2>
-          <p >
-            Hey team! At Barbara's request in the last all employee meeting, I've set up an easy way to quickly find information about our officemates.</p>
-          <p > Search below by name or email to pull up who you are looking for. Any questions or issues, feel free to reach out!
-          </p>
+          <p >Team, I've set up an easy way to quickly find contact information for each team member.</p>
+          <p > Search below by name or email to pull up who you are looking for. Any questions or issues, feel free to reach out!</p>
           <Search
             name="search"
             startSort={this.startSort}
@@ -75,8 +73,6 @@ class Directory extends Component {
               </tr>
             </thead>
             <tbody>
-
-              {/* if it's not sorted, map accordingly */}
               {!this.state.sorted ? this.state.employees.map(employee => (
 
 
@@ -92,7 +88,7 @@ class Directory extends Component {
                 />
 
               ))
-                // otherwise map the sorted employees
+                // map the sorted employees
                 : this.state.empSort.map(employee => (
 
                   <Employees
